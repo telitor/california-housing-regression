@@ -7,7 +7,7 @@ This project trains a Linear Regression model on the [California Housing Dataset
 ## 📉 Visualization
 The scatter plot compares **true house prices** (x-axis) vs **predicted house prices** (y-axis).  
 The red diagonal line represents perfect predictions — the closer the dots are to this line, the better the model.
-<img src="prediction_plot.png" width="500"/>
+<img src="true_vs_pred.png" width="500"/>
 > The model captures the overall trend well, though scatter increases at higher price ranges — typical behavior for Linear Regression on this dataset.
 ---
 ## 🗂️ Project Structure
