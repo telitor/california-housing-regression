@@ -10,10 +10,23 @@ This project trains a Linear Regression model on the [California Housing Dataset
 
 ---
 
+## 📉 Visualization
+
+The scatter plot compares **true house prices** (x-axis) vs **predicted house prices** (y-axis).  
+The red diagonal line represents perfect predictions — the closer the dots are to this line, the better the model.
+
+![Prediction vs True Value](assets/prediction_plot.png)
+
+> The model captures the overall trend well, though scatter increases at higher price ranges — typical behavior for Linear Regression on this dataset.
+
+---
+
 ## 🗂️ Project Structure
 
 ```
-├── main.py        # Main script: data loading, training, evaluation, visualization
+├── main.py                     # Main script: data loading, training, evaluation, visualization
+├── assets/
+│   └── prediction_plot.png     # Visualization output
 └── README.md
 ```
 
@@ -64,21 +77,6 @@ Visualize (scatter plot: true vs predicted)
 
 ---
 
-## 📉 Visualization
-
-The scatter plot compares **true house prices** (x-axis) vs **predicted house prices** (y-axis).  
-The red diagonal line represents perfect predictions — the closer the dots are to this line, the better the model.
-
----
-
-## 📝 Notes
-
-- Housing prices above 5.0 (likely capped values) are filtered out to reduce noise.
-- `train_size=0.2` means only 20% of the data is used for training — intentionally small for experimentation.
-- `random_state=42` ensures reproducibility.
-
----
-
 ## 🧠 Key Concepts
 
 - `train_test_split` — Splits dataset into training and testing sets
@@ -98,6 +96,14 @@ joblib.dump(model, 'housing_model.pkl')
 # Load
 model = joblib.load('housing_model.pkl')
 ```
+
+---
+
+## 📝 Notes
+
+- Housing prices above 5.0 (likely capped values) are filtered out to reduce noise.
+- `train_size=0.2` means only 20% of the data is used for training — intentionally small for experimentation.
+- `random_state=42` ensures reproducibility.
 
 ---
 
